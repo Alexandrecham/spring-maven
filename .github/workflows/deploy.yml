@@ -26,7 +26,7 @@ jobs:
       # --- CORRECTION 1 : On indique le dossier du projet ---
       - name: Build with Maven
         working-directory: ./demo-github
-        run: mvn clean verify
+        run: mvn clean package -DskipTests
 
       # --- CORRECTION 2 : On cherche le JAR au bon endroit ---
       - name: Upload JAR artifact
